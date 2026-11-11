@@ -775,7 +775,7 @@ footer .fbar .fine a{color:#fff;text-decoration:underline;text-decoration-color:
   <li><a href="#charlas">Charlas</a></li>
   <li><a href="#divulgacion">Blog</a></li>
   <li><a href="https://contacto-nutfem.subscribepage.io/" target="_blank" rel="noopener">Contacto</a></li>
-  <li><a class="dip" href="diplomado.html" target="_blank" rel="noopener">Diplomado NUTFEM 2027 <span aria-hidden="true">↗</span></a></li>
+  <li><a class="dip" href="diplomado.html">Diplomado NUTFEM 2027 <span aria-hidden="true">↗</span></a></li>
  </ul>
 </div></nav>
 
@@ -785,7 +785,7 @@ footer .fbar .fine a{color:#fff;text-decoration:underline;text-decoration-color:
   <h1>Nutrición femenina desde la <span class="kw">mirada clínica</span></h1>
   <p class="lead">Formación para profesionales de la salud que quieren comprender la salud hormonal femenina con una mirada integrativa, interdisciplinaria y <mark>no peso-céntrica</mark>.</p>
   <ul class="hchips"><li><a href="#agenda">Jornadas clínicas</a></li><li><a href="#agenda">Masterclass</a></li><li><a href="diplomado.html">Diplomado</a></li><li><a href="#divulgacion">Blog</a></li></ul>
-  <div class="row"><a class="btn o" href="diplomado.html" target="_blank" rel="noopener">¿Ya revisaste el Diplomado NUTFEM 2027? ↗</a></div>
+  <div class="row"><a class="btn o" href="diplomado.html">¿Ya revisaste el Diplomado NUTFEM 2027? ↗</a></div>
  </div>
  <div class="ph" role="img" aria-label="Cuatro mujeres diversas recostadas con las cabezas juntas" style="background-image:url(img/hero.webp)"></div>
 </div></header>
@@ -878,7 +878,7 @@ footer .fbar .fine a{color:#fff;text-decoration:underline;text-decoration-color:
   <p class="lead">Una formación orientada a la actualización clínica y la integración de la salud menstrual en la consulta, comprendiendo el rol de la nutrición como eje modulador de la salud hormonal femenina.</p>
   <p class="dinv">Si esta mirada resuena contigo y quieres profundizar en estos conocimientos para llevarlos a tu práctica clínica, te invitamos a conocer nuestro Diplomado NUTFEM 2027.</p>
   <div class="dstats"><div><b>6</b><span>módulos</span></div><div><b>42</b><span>clases</span></div><div><b>+120</b><span>horas académicas</span></div><div><b>100 %</b><span>online y grabado</span></div></div>
-  <div class="row"><a class="btn" href="diplomado.html" target="_blank" rel="noopener">Quiero conocer el Diplomado NUTFEM 2027 ↗</a></div>
+  <div class="row"><a class="btn" href="diplomado.html">Quiero conocer el Diplomado NUTFEM 2027 ↗</a></div>
   <p class="dnote dstart">Inicio: abril 2027</p>
  </div>
 </div></section>
@@ -1362,10 +1362,10 @@ footer .fbar .fine a{color:#fff;text-decoration:underline;text-decoration-color:
  var v=document.getElementById('dipView'),f=document.getElementById('dipFrame'),last=null,H='programa-diplomado';
  function open(push){last=document.activeElement;if(!f.getAttribute('src'))f.setAttribute('src','diplomado.html');v.hidden=false;document.body.style.overflow='hidden';try{if(push!==false)history.replaceState(null,'','#'+H)}catch(e){}setTimeout(function(){document.getElementById('dipClose').focus()},30)}
  function close(){v.hidden=true;document.body.style.overflow='';try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}if(last)last.focus()}
- document.querySelectorAll('a[href="diplomado.html"]').forEach(function(a){a.removeAttribute('target');a.addEventListener('click',function(e){e.preventDefault();open()})});
+ 
  document.getElementById('dipClose').addEventListener('click',close);
  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!v.hidden)close()});
- if((location.hash||'').slice(1)===H)open(false);
+ if((location.hash||'').slice(1)===H)location.replace('diplomado.html');
 })();
 </script>
 </body>
