@@ -1289,41 +1289,6 @@ footer .fbar .fine a{color:#fff;text-decoration:underline;text-decoration-color:
 
  (function(){var hs=[].slice.call(document.querySelectorAll('.tcard header'));function eqH(){hs.forEach(function(h){h.style.minHeight=''});var g=document.querySelector('.tgrid');if(!g||getComputedStyle(g).gridTemplateColumns.split(' ').length<2)return;var m=Math.max.apply(null,hs.map(function(h){return h.offsetHeight}));hs.forEach(function(h){h.style.minHeight=m+'px'})}eqH();window.addEventListener('resize',eqH);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(eqH)})();
  document.querySelectorAll('.tcard').forEach(function(c){var x=c.querySelector('.ttext'),b=c.querySelector('.tbtn');x.classList.add('clamp');if(x.scrollHeight>x.clientHeight+4){b.hidden=false;b.addEventListener('click',function(){var o=x.classList.toggle('clamp');b.setAttribute('aria-expanded',!o);b.textContent=o?'Leer más':'Mostrar menos'})}else{x.classList.remove('clamp')}});
- // popup de contacto general
- /* ===== CONFIGURACIÓN DE FORMULARIOS · pega aquí los enlaces =====
-    MailerLite: Formularios → Formulario incrustado → HTML → copia la dirección action="…"
-    (https://assets.mailerlite.com/jsonp/NUMERO/forms/NUMERO/subscribe).
-    También acepta una Web App de Google Apps Script. Vacío = se abre el correo con el mensaje listo. */
- var ACAD={
-  CONTACT_ENDPOINT:"",     // Contacto general (nombre, correo, comentario → campo "mensaje")
-  CHARLA_ENDPOINT:"",      // Cotización de charlas
-  CONTACT_EMAIL:"academianutfem@gmail.com"
- };
- function nfSend(url,d){
-  if(/mailerlite\.com/.test(url)){var fd=new FormData();Object.keys(d).forEach(function(k){if(d[k]==null||d[k]===''||['pagina','fecha','tipo_formulario'].indexOf(k)>=0)return;var key=(k==='nombre')?'name':k;fd.append('fields['+key+']',d[k])});fd.append('ml-submit','1');fd.append('anticsrf','true');return fetch(url,{method:'POST',mode:'no-cors',body:fd})}
-  return fetch(url,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(d)})}
- function nfPop(o){
-  var pg=document.getElementById(o.id),form=pg.querySelector('form'),err=pg.querySelector('.err'),sbtn=form.querySelector('[type=submit]'),lbl=sbtn.textContent,last=null,origen='';
-  function reset(){pg.querySelector('[id$=form-wrap]').hidden=false;pg.querySelector('.rg-ok').hidden=true;err.textContent=''}
-  function open(src){last=document.activeElement;origen=src||'';pg.hidden=false;pg.scrollTop=0;document.body.style.overflow='hidden';setTimeout(function(){try{form.querySelector('input').focus({preventScroll:true})}catch(e){}},60)}
-  function close(){if(pg.hidden)return;pg.hidden=true;document.body.style.overflow='';if(last&&last.focus)last.focus();if(!pg.querySelector('.rg-ok').hidden){form.reset();reset()}}
-  document.querySelectorAll(o.trigger).forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();open((b.textContent||'').trim())})});
-  pg.querySelectorAll(o.back).forEach(function(b){b.addEventListener('click',close)});
-  pg.addEventListener('click',function(e){if(e.target===pg||e.target.classList.contains('rg-g'))close()});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!pg.hidden)close()});
-  form.addEventListener('submit',function(e){
-   e.preventDefault();err.textContent='';var bad=null;
-   form.querySelectorAll('[required]').forEach(function(f){var v=f.type==='email'?/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.value.trim()):f.value.trim()!=='';f.setAttribute('aria-invalid',v?'false':'true');if(!v&&!bad)bad=f});
-   if(bad){err.textContent=bad.type==='email'&&bad.value.trim()?'Revisa tu correo electrónico.':'Completa los campos obligatorios.';bad.focus();return}
-   if(form.querySelector('.hp input').value)return;
-   var d={tipo_formulario:o.tipo};form.querySelectorAll('input:not(.hp input),select,textarea').forEach(function(f){d[f.name]=f.value.trim()});
-   d.email=(d.email||'').toLowerCase();d.origen=origen;d.pagina=location.href.split('#')[0].split('?')[0];d.fecha=new Date().toISOString();
-   function done(){pg.querySelector('[id$=-name]').textContent=d.nombre.split(/\s+/)[0];pg.querySelector('[id$=form-wrap]').hidden=true;pg.querySelector('.rg-ok').hidden=false;sbtn.disabled=false;sbtn.textContent=lbl}
-   sbtn.disabled=true;sbtn.textContent='ENVIANDO…';var url=ACAD[o.endpoint];
-   if(url){nfSend(url,d).then(done,function(){err.textContent='No pudimos enviar tu mensaje. Escríbenos a '+ACAD.CONTACT_EMAIL+'.';sbtn.disabled=false;sbtn.textContent=lbl})}
-   else{var body=Object.keys(d).filter(function(k){return d[k]&&['pagina','fecha','tipo_formulario'].indexOf(k)<0}).map(function(k){return k+': '+d[k]}).join('\n');location.href='mailto:'+ACAD.CONTACT_EMAIL+'?subject='+encodeURIComponent(o.subject+' · '+d.nombre)+'&body='+encodeURIComponent(body);done()}
-  });
- }
  /* Contacto y charlas ahora abren las páginas de MailerLite (enlaces directos) */
 
 
@@ -1353,20 +1318,6 @@ footer .fbar .fine a{color:#fff;text-decoration:underline;text-decoration-color:
 
 })();
 </script>
-<div class="dv" id="dipView" role="dialog" aria-modal="true" aria-label="Diplomado NUTFEM 2027" hidden>
- <div class="dv-bar"><button type="button" id="dipClose">← Volver a la Academia</button><span>Diplomado NUTFEM 2027</span></div>
- <iframe id="dipFrame" title="Diplomado NUTFEM 2027"></iframe>
-</div>
-<script>
-(function(){
- var v=document.getElementById('dipView'),f=document.getElementById('dipFrame'),last=null,H='programa-diplomado';
- function open(push){last=document.activeElement;if(!f.getAttribute('src'))f.setAttribute('src','diplomado.html');v.hidden=false;document.body.style.overflow='hidden';try{if(push!==false)history.replaceState(null,'','#'+H)}catch(e){}setTimeout(function(){document.getElementById('dipClose').focus()},30)}
- function close(){v.hidden=true;document.body.style.overflow='';try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}if(last)last.focus()}
- 
- document.getElementById('dipClose').addEventListener('click',close);
- document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!v.hidden)close()});
- if((location.hash||'').slice(1)===H)location.replace('diplomado.html');
-})();
-</script>
+<script>if((location.hash||'').slice(1)==='programa-diplomado')location.replace('diplomado.html');</script>
 </body>
 </html>
