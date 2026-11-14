@@ -27,14 +27,23 @@ main{padding:24px 16px 72px;display:grid;gap:20px;justify-items:center}
 .end{text-align:center;padding:8px 0 24px}.end p{margin:0 0 14px;color:var(--soft);font-size:1rem}
 .end .btn{background:var(--rose);color:var(--bar);padding:16px 28px;font-size:.88rem}
 @media(max-width:640px){.t,.bar .btn{display:none}select{flex:1;max-width:none}main{gap:10px;padding:12px 8px 64px}}
+.top{position:sticky;top:0;z-index:6}
+.top .bar{position:static}
+.topbar{background:#640D14;color:#fff;border-bottom:1px solid rgba(255,255,255,.16)}
+.topbar .tb{max-width:1200px;margin:0 auto;padding:7px 20px;display:flex;align-items:center;justify-content:center;gap:16px;font:600 .88rem/1.2 'Inter',system-ui,sans-serif;letter-spacing:.01em}
+.topbar a{background:#EC96AC;color:#640D14;text-decoration:none;font-weight:700;font-size:.78rem;letter-spacing:.08em;padding:7px 14px;border-radius:2px;white-space:nowrap}
+.topbar a:hover,.topbar a:focus-visible{background:#fff;outline:none}
+@media(max-width:520px){.topbar .tb{justify-content:space-between;gap:10px;font-size:.8rem;padding:6px 14px}.topbar a{font-size:.72rem;padding:6px 10px}}
+.pg{scroll-margin-top:122px}
 </style>
 </head>
 <body>
+<div class="top"><div class="topbar"><div class="tb"><span>Diplomado NUTFEM 2027</span><a href="https://encuadrado.com/s/consulta-marcela-paz-calderon/diplomado-nutfem-2027/" target="_blank" rel="noopener">INSCRÍBETE AQUÍ</a></div></div>
 <header class="bar">
 <span class="t">Dossier NUTFEM 2027<small>Programa completo</small></span>
 <select id="go" aria-label="Ir a sección"><option value="1">01 · Portada</option><option value="2">02 · Contenido</option><option value="3">03 · El diplomado en una página</option><option value="4">04 · Por qué este diplomado</option><option value="5">05 · El enfoque NUTFEM</option><option value="6">06 · ¿Para quién es?</option><option value="7">07 · Qué aprenderás</option><option value="9">09 · Seis módulos</option><option value="10">10 · Malla curricular</option><option value="12">12 · Cómo se vive el diplomado</option><option value="14">14 · Portafolio Clínico</option><option value="15">15 · Evaluación y certificación</option><option value="16">16 · Equipo docente</option><option value="17">17 · Voces de generaciones anteriores</option><option value="18">18 · Valores e inscripción</option><option value="19">19 · Preguntas frecuentes</option><option value="20">20 · Sé parte de NUTFEM 2027</option></select>
 <a class="btn" href="https://encuadrado.com/s/consulta-marcela-paz-calderon/diplomado-nutfem-2027/" target="_blank" rel="noopener">RESERVAR MI CUPO</a>
-</header>
+</header></div>
 <main id="sc">
 <figure class="pg" id="p1"><img src="img/dossier/p01.webp" alt="Dossier NUTFEM 2027, página 1" width="595" height="842" decoding="async" draggable="false"></figure>
 <figure class="pg" id="p2"><img src="img/dossier/p02.webp" alt="Dossier NUTFEM 2027, página 2" width="595" height="842" decoding="async" draggable="false"></figure>
