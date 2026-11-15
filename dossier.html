@@ -34,7 +34,13 @@ main{padding:24px 16px 72px;display:grid;gap:20px;justify-items:center}
 .topbar a{background:#EC96AC;color:#640D14;text-decoration:none;font-weight:700;font-size:.78rem;letter-spacing:.08em;padding:7px 14px;border-radius:2px;white-space:nowrap}
 .topbar a:hover,.topbar a:focus-visible{background:#fff;outline:none}
 @media(max-width:520px){.topbar .tb{justify-content:space-between;gap:10px;font-size:.8rem;padding:6px 14px}.topbar a{font-size:.72rem;padding:6px 10px}}
+.pg{position:relative}
+.hot{position:absolute;display:block;z-index:2;border-radius:2px;outline-offset:2px}
+.hot:hover,.hot:focus-visible{box-shadow:0 0 0 3px rgba(242,182,198,.9);outline:none}
+.mnote{display:none;margin:0;padding:8px 16px;background:#3A2C30;color:#F5EDEF;font:500 .8rem/1.4 'Inter',sans-serif;text-align:center}
+@media(max-width:640px){.mnote{display:block}}
 .pg{scroll-margin-top:122px}
+@media(max-width:640px){.pg{scroll-margin-top:158px}}
 </style>
 </head>
 <body>
@@ -43,7 +49,7 @@ main{padding:24px 16px 72px;display:grid;gap:20px;justify-items:center}
 <span class="t">Dossier NUTFEM 2027<small>Programa completo</small></span>
 <select id="go" aria-label="Ir a sección"><option value="1">01 · Portada</option><option value="2">02 · Contenido</option><option value="3">03 · El diplomado en una página</option><option value="4">04 · Por qué este diplomado</option><option value="5">05 · El enfoque NUTFEM</option><option value="6">06 · ¿Para quién es?</option><option value="7">07 · Qué aprenderás</option><option value="9">09 · Seis módulos</option><option value="10">10 · Malla curricular</option><option value="12">12 · Cómo se vive el diplomado</option><option value="14">14 · Portafolio Clínico</option><option value="15">15 · Evaluación y certificación</option><option value="16">16 · Equipo docente</option><option value="17">17 · Voces de generaciones anteriores</option><option value="18">18 · Valores e inscripción</option><option value="19">19 · Preguntas frecuentes</option><option value="20">20 · Sé parte de NUTFEM 2027</option></select>
 <a class="btn" href="https://encuadrado.com/s/consulta-marcela-paz-calderon/diplomado-nutfem-2027/" target="_blank" rel="noopener">RESERVAR MI CUPO</a>
-</header></div>
+</header><p class="mnote">Para una mejor lectura, te recomendamos abrir el dossier desde un computador.</p></div>
 <main id="sc">
 <figure class="pg" id="p1"><img src="img/dossier/p01.webp" alt="Dossier NUTFEM 2027, página 1" width="595" height="842" decoding="async" draggable="false"></figure>
 <figure class="pg" id="p2"><img src="img/dossier/p02.webp" alt="Dossier NUTFEM 2027, página 2" width="595" height="842" decoding="async" draggable="false"></figure>
@@ -51,7 +57,7 @@ main{padding:24px 16px 72px;display:grid;gap:20px;justify-items:center}
 <figure class="pg" id="p4"><img src="img/dossier/p04.webp" alt="Dossier NUTFEM 2027, página 4" width="595" height="842" loading="lazy" decoding="async" draggable="false"></figure>
 <figure class="pg" id="p5"><img src="img/dossier/p05.webp" alt="Dossier NUTFEM 2027, página 5" width="595" height="842" loading="lazy" decoding="async" draggable="false"></figure>
 <figure class="pg" id="p6"><img src="img/dossier/p06.webp" alt="Dossier NUTFEM 2027, página 6" width="595" height="842" loading="lazy" decoding="async" draggable="false"></figure>
-<figure class="pg" id="p7"><img src="img/dossier/p07.webp" alt="Dossier NUTFEM 2027, página 7" width="595" height="842" loading="lazy" decoding="async" draggable="false"></figure>
+<figure class="pg" id="p7"><a class="hot" href="https://dossier-nutfem2027.subscribepage.io/" target="_blank" rel="noopener" aria-label="Inscríbete aquí" style="left:11.06%;top:88.03%;width:27.57%;height:4.33%"></a><img src="img/dossier/p07.webp" alt="Dossier NUTFEM 2027, página 7" width="595" height="842" loading="lazy" decoding="async" draggable="false"></figure>
 <figure class="pg" id="p8"><img src="img/dossier/p08.webp" alt="Dossier NUTFEM 2027, página 8" width="595" height="842" loading="lazy" decoding="async" draggable="false"></figure>
 <figure class="pg" id="p9"><img src="img/dossier/p09.webp" alt="Dossier NUTFEM 2027, página 9" width="595" height="842" loading="lazy" decoding="async" draggable="false"></figure>
 <figure class="pg" id="p10"><img src="img/dossier/p10.webp" alt="Dossier NUTFEM 2027, página 10" width="595" height="842" loading="lazy" decoding="async" draggable="false"></figure>
@@ -61,10 +67,10 @@ main{padding:24px 16px 72px;display:grid;gap:20px;justify-items:center}
 <figure class="pg" id="p14"><img src="img/dossier/p14.webp" alt="Dossier NUTFEM 2027, página 14" width="595" height="842" loading="lazy" decoding="async" draggable="false"></figure>
 <figure class="pg" id="p15"><img src="img/dossier/p15.webp" alt="Dossier NUTFEM 2027, página 15" width="595" height="842" loading="lazy" decoding="async" draggable="false"></figure>
 <figure class="pg" id="p16"><img src="img/dossier/p16.webp" alt="Dossier NUTFEM 2027, página 16" width="595" height="842" loading="lazy" decoding="async" draggable="false"></figure>
-<figure class="pg" id="p17"><img src="img/dossier/p17.webp" alt="Dossier NUTFEM 2027, página 17" width="595" height="842" loading="lazy" decoding="async" draggable="false"></figure>
-<figure class="pg" id="p18"><img src="img/dossier/p18.webp" alt="Dossier NUTFEM 2027, página 18" width="595" height="842" loading="lazy" decoding="async" draggable="false"></figure>
+<figure class="pg" id="p17"><a class="hot" href="https://dossier-nutfem2027.subscribepage.io/" target="_blank" rel="noopener" aria-label="Sé parte de la Generación 2027" style="left:10.98%;top:45.48%;width:44.43%;height:4.40%"></a><img src="img/dossier/p17.webp" alt="Dossier NUTFEM 2027, página 17" width="595" height="842" loading="lazy" decoding="async" draggable="false"></figure>
+<figure class="pg" id="p18"><a class="hot" href="https://dossier-nutfem2027.subscribepage.io/" target="_blank" rel="noopener" aria-label="Reservar mi cupo" style="left:35.09%;top:45.85%;width:29.73%;height:4.21%"></a><img src="img/dossier/p18.webp" alt="Dossier NUTFEM 2027, página 18" width="595" height="842" loading="lazy" decoding="async" draggable="false"></figure>
 <figure class="pg" id="p19"><img src="img/dossier/p19.webp" alt="Dossier NUTFEM 2027, página 19" width="595" height="842" loading="lazy" decoding="async" draggable="false"></figure>
-<figure class="pg" id="p20"><img src="img/dossier/p20.webp" alt="Dossier NUTFEM 2027, página 20" width="595" height="842" loading="lazy" decoding="async" draggable="false"></figure>
+<figure class="pg" id="p20"><a class="hot" href="https://dossier-nutfem2027.subscribepage.io/" target="_blank" rel="noopener" aria-label="Reservar mi cupo" style="left:7.52%;top:73.87%;width:29.99%;height:4.40%"></a><img src="img/dossier/p20.webp" alt="Dossier NUTFEM 2027, página 20" width="595" height="842" loading="lazy" decoding="async" draggable="false"></figure>
 <div class="end"><p>¿Lista para ser parte de la Generación 2027?</p><a class="btn" href="https://encuadrado.com/s/consulta-marcela-paz-calderon/diplomado-nutfem-2027/" target="_blank" rel="noopener">RESERVAR MI CUPO</a></div>
 </main>
 <div class="ct" id="ct" aria-live="polite">1 / 20</div>
