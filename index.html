@@ -997,7 +997,7 @@ html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 112px)!important}
 <div class="fbar"><div class="w"><div class="fine"><span>© 2026 Academia NUTFEM · Todos los derechos reservados · <a href="privacidad.html" target="_blank" rel="noopener">Política de privacidad</a></span><span>El contenido de este sitio es educativo y no reemplaza la consulta con un profesional de la salud.</span></div></div></div></footer>
 
 <div class="rd" id="reader" role="dialog" aria-modal="true" aria-label="Artículo del blog NUTFEM" hidden>
- <div class="rd-bar"><button class="rd-back" type="button" id="rdClose">← Volver a la academia</button><button class="share rd-share" type="button" id="rdShare">Copiar enlace</button></div>
+ <div class="rd-bar"><button class="rd-back" type="button" id="rdClose">← Volver a la academia</button></div>
  <article class="rd-art" id="art-sin-fronteras" data-id="sin-fronteras" hidden>
   <div class="rd-hero" role="img" aria-label="Dos mujeres en un campo al atardecer, una con la mano en alto" style="background-image:url(img/field.webp)"></div>
   <div class="rd-in">
@@ -1317,10 +1317,6 @@ html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 112px)!important}
  document.getElementById('rdClose').addEventListener('click',closeArt);
  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!rd.hidden)closeArt()});
  rd.querySelectorAll('[data-goto]').forEach(function(b){b.addEventListener('click',function(){var t=b.dataset.goto;closeArt();setTimeout(function(){var el=document.getElementById(t);if(el)el.scrollIntoView({behavior:'smooth'})},50)})});
- var rs=document.getElementById('rdShare');
- rs.addEventListener('click',function(){var vis=rd.querySelector('.rd-art:not([hidden])');var u=location.href.split(String.fromCharCode(35))[0]+String.fromCharCode(35)+(vis?vis.dataset.id:'');
-  function done(){rs.textContent='Enlace copiado';setTimeout(function(){rs.textContent='Copiar enlace'},1800)}
-  try{navigator.clipboard.writeText(u).then(done,function(){rs.textContent=u})}catch(e){rs.textContent=u}});
  function artUrl(el){var a=el.closest('.rd-art');return location.href.split(String.fromCharCode(35))[0]+String.fromCharCode(35)+(a?a.dataset.id:'')}
  rd.querySelectorAll('.rd-like').forEach(function(b){var id='nf-like-'+b.closest('.rd-art').dataset.id,on=false;try{on=localStorage.getItem(id)==='1'}catch(e){}
   function paint(){b.setAttribute('aria-pressed',on);b.querySelector('span').textContent=on?'Te gustó':'Me gusta'}paint();
