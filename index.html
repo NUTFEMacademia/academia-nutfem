@@ -756,11 +756,17 @@ footer .fbar .fine a{color:#fff;text-decoration:underline;text-decoration-color:
 @media(max-width:560px){.ctwo{grid-template-columns:1fr}}
 @media(max-width:480px){.rg{padding:12px;align-items:flex-start}.rg-f-in{padding:26px 20px 24px}}
 
-.topbar{background:#640D14;color:#fff;border-bottom:1px solid rgba(255,255,255,.16)}
-.topbar .tb{max-width:1200px;margin:0 auto;padding:7px 20px;display:flex;align-items:center;justify-content:center;gap:16px;font:600 .88rem/1.2 'Inter',system-ui,sans-serif;letter-spacing:.01em}
-.topbar a{background:#EC96AC;color:#640D14;text-decoration:none;font-weight:700;font-size:.78rem;letter-spacing:.08em;padding:7px 14px;border-radius:2px;white-space:nowrap}
-.topbar a:hover,.topbar a:focus-visible{background:#fff;outline:none}
-@media(max-width:520px){.topbar .tb{justify-content:space-between;gap:10px;font-size:.8rem;padding:6px 14px}.topbar a{font-size:.72rem;padding:6px 10px}}
+.topbar{display:block;background:#640D14;color:#fff;border-bottom:1px solid rgba(255,255,255,.16);text-decoration:none;overflow:hidden;white-space:nowrap}
+.mq-t{display:inline-flex;animation:mq 28s linear infinite}
+.mq-g{display:inline-flex;flex:none}
+.mq-i{display:inline-block;padding:9px 28px;font:600 .86rem/1.2 'Inter',system-ui,sans-serif;letter-spacing:.02em}
+.mq-i b{color:#EC96AC;font-weight:800;letter-spacing:.08em}
+.mq-d{color:#EC96AC;margin:0 6px}
+.topbar:hover .mq-t,.topbar:focus-visible .mq-t{animation-play-state:paused}
+.topbar:focus-visible{outline:2px solid #EC96AC;outline-offset:-2px}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:520px){.mq-i{font-size:.8rem;padding:8px 20px}.mq-t{animation-duration:22s}}
+@media(prefers-reduced-motion:reduce){.mq-t{animation-duration:60s}}
 html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 112px)!important}
 .ha .hsep{font-weight:300;opacity:.45}.ha h1 .kw b{font-weight:800}
 .ha .lead+.lead{margin-top:16px}.ha .lead strong{color:var(--ink)}
@@ -782,7 +788,7 @@ html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 112px)!important}
 
 </head>
 <body>
-<nav class="nav" aria-label="Principal"><div class="topbar"><div class="tb"><span>Diplomado NUTFEM 2027</span><a href="diplomado.html">INSCRÍBETE AQUÍ</a></div></div><div class="w" style="position:relative">
+<nav class="nav" aria-label="Principal"><a class="topbar mq" href="diplomado.html" aria-label="Diplomado NUTFEM 2027 · Inscripciones abiertas"><span class="mq-t" aria-hidden="true"><span class="mq-g"><span class="mq-i">Diplomado NUTFEM 2027 <span class="mq-d">·</span> <b>INSCRIPCIONES ABIERTAS</b></span><span class="mq-i">Diplomado NUTFEM 2027 <span class="mq-d">·</span> <b>INSCRIPCIONES ABIERTAS</b></span><span class="mq-i">Diplomado NUTFEM 2027 <span class="mq-d">·</span> <b>INSCRIPCIONES ABIERTAS</b></span><span class="mq-i">Diplomado NUTFEM 2027 <span class="mq-d">·</span> <b>INSCRIPCIONES ABIERTAS</b></span></span><span class="mq-g"><span class="mq-i">Diplomado NUTFEM 2027 <span class="mq-d">·</span> <b>INSCRIPCIONES ABIERTAS</b></span><span class="mq-i">Diplomado NUTFEM 2027 <span class="mq-d">·</span> <b>INSCRIPCIONES ABIERTAS</b></span><span class="mq-i">Diplomado NUTFEM 2027 <span class="mq-d">·</span> <b>INSCRIPCIONES ABIERTAS</b></span><span class="mq-i">Diplomado NUTFEM 2027 <span class="mq-d">·</span> <b>INSCRIPCIONES ABIERTAS</b></span></span></span></a><div class="w" style="position:relative">
  <a class="logo" href="#inicio"><img src="img/logo.png" alt="" width="30" height="30"><span>NUTFEM<small>ACADEMIA</small></span></a>
  <button class="menu" id="menuBtn" aria-expanded="false" aria-controls="links">Menú</button>
  <ul class="links" id="links">
