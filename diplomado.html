@@ -1177,6 +1177,15 @@ section.m2 .ses .h{font:500 1.25rem/1 var(--head)!important;color:#640D14!import
 .tsQ .tsN-f{border:1px solid #E8C4CF;border-radius:4px;padding:32px clamp(22px,3vw,40px);background:#fff;margin:0}
 .tsQ .tsN-f+.tsN-f{margin-top:24px}
 @media(max-width:900px){.tsR-g{grid-template-columns:1fr 1fr}}@media(max-width:600px){.tsR-g{grid-template-columns:1fr}}
+.m2-g{align-items:stretch!important}
+.m2-c{display:flex;flex-direction:column}
+.m2-bg{padding-bottom:32px!important}
+section.m2 .m2-l,.m2-i{margin-top:20px;border-top:1px solid #F0DDE3;flex:1;display:flex;flex-direction:column}
+section.m2 .m2-l .ses,.m2-i li{flex:1;min-height:68px;align-items:center!important}
+.m2-i li{display:grid;grid-template-columns:40px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid #F0DDE3}
+.m2-i b{font:500 .98rem var(--body)!important;color:#241C1F!important}
+.m2-ii{display:flex;align-items:center;color:#B0173D}.m2-ii svg{width:24px;height:24px}
+@media(max-width:560px){.m2-i li{grid-template-columns:36px 1fr;min-height:56px}.m2-i b{font-size:.92rem!important}}
 </style><script>/* detecta si el sistema dibuja banderas en color */
 (function(){try{var c=document.createElement('canvas');c.width=c.height=32;var x=c.getContext('2d');x.textBaseline='top';x.font='28px sans-serif';x.fillText('\uD83C\uDDE8\uD83C\uDDF1',0,0);var d=x.getImageData(0,0,32,32).data,col=0;for(var i=0;i<d.length;i+=4){if(d[i+3]>40&&(Math.abs(d[i]-d[i+1])>40||Math.abs(d[i+1]-d[i+2])>40))col++}if(col<20)document.documentElement.classList.add('no-flags')}catch(e){}})();</script>
 </head>
@@ -1281,9 +1290,9 @@ section.m2 .ses .h{font:500 1.25rem/1 var(--head)!important;color:#640D14!import
 </div>
 <div class="m2-c m2-bg"><p class="m2-k"><svg class="m2-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>A tu ritmo</p><h3>Recursos y actividades en diferido</h3>
 <ul class="m2-i">
-<li><b>Clases grabadas complementarias</b></li>
-<li><b>Material de estudio y actividades en diferido</b></li>
-<li><b>Quiz mensual</b></li>
+<li><span class="m2-ii"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M10.5 9.5v5l4-2.5z" fill="currentColor"/></svg></span><b>Clases grabadas complementarias</b></li>
+<li><span class="m2-ii"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v16h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg></span><b>Material de estudio y actividades en diferido</b></li>
+<li><span class="m2-ii"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="2"/><path d="M9 3.5h6v2.5H9zM8.5 11l1.5 1.5 3-3M8.5 16h7"/></svg></span><b>Quiz mensual</b></li>
 </ul></div>
 </div>
 <div class="m2-f"><div class="mtz"><span class="mtz-q">Consulta cuál será tu horario de clases según tu país:</span><div class="tz" role="group" aria-label="Ver los horarios en tu país"><button type="button" data-tz="America/Santiago"><span class="fl" aria-hidden="true">🇨🇱</span> Chile</button><button type="button" data-tz="America/Argentina/Buenos_Aires"><span class="fl" aria-hidden="true">🇦🇷</span> Argentina</button><button type="button" data-tz="America/Montevideo"><span class="fl" aria-hidden="true">🇺🇾</span> Uruguay</button><button type="button" data-tz="America/Lima"><span class="fl" aria-hidden="true">🇵🇪</span> Perú</button><button type="button" data-tz="America/Bogota"><span class="fl" aria-hidden="true">🇨🇴</span> Colombia</button><button type="button" data-tz="America/Guayaquil"><span class="fl" aria-hidden="true">🇪🇨</span> Ecuador</button><button type="button" data-tz="America/Mexico_City"><span class="fl" aria-hidden="true">🇲🇽</span> México</button><button type="button" data-tz="Europe/Madrid"><span class="fl" aria-hidden="true">🇪🇸</span> España</button></div><p class="tzn" id="tzn">El diplomado se realiza en horario de Chile.</p></div>
