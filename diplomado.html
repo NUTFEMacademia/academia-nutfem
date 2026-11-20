@@ -1218,10 +1218,10 @@ section.fi{background:#640D14!important}.fi .kx2{color:#F2B6C6!important}.fi h2{
 .fi-c3{margin:64px auto 0;max-width:960px;padding-top:36px;border-top:1px solid rgba(242,182,198,.45)}
 .fi-st{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:x}
 .fi-st li{position:relative;display:flex;flex-direction:column;align-items:center;gap:10px}
-.fi-st li+li:before{content:"→";position:absolute;left:-14px;top:6px;color:#F2B6C6;font-size:1.2rem}
+.fi-st{display:flex!important;justify-content:center;gap:64px!important}.fi-st li+li:before{left:-32px!important}.fi-st span{line-height:16px}.fi-st b{line-height:24px}.fi-st li+li:before{content:"→";position:absolute;left:-8px;top:21px;transform:translateX(-50%);height:24px;line-height:24px;color:#F2B6C6;font-size:1.2rem}
 .fi-st span{font:600 .8rem var(--body);letter-spacing:.12em;color:#F2B6C6}
 .fi-st b{font:600 1.05rem/1.3 var(--head);color:#fff}
-@media(max-width:700px){.fi-st{grid-template-columns:1fr 1fr;row-gap:24px}.fi-st li+li:before{display:none}}
+@media(max-width:700px){.fi-st{display:grid!important;grid-template-columns:1fr 1fr;row-gap:24px;gap:24px 16px!important}.fi-st li+li:before{display:none}}
 </style><script>/* detecta si el sistema dibuja banderas en color */
 (function(){try{var c=document.createElement('canvas');c.width=c.height=32;var x=c.getContext('2d');x.textBaseline='top';x.font='28px sans-serif';x.fillText('\uD83C\uDDE8\uD83C\uDDF1',0,0);var d=x.getImageData(0,0,32,32).data,col=0;for(var i=0;i<d.length;i+=4){if(d[i+3]>40&&(Math.abs(d[i]-d[i+1])>40||Math.abs(d[i+1]-d[i+2])>40))col++}if(col<20)document.documentElement.classList.add('no-flags')}catch(e){}})();</script>
 </head>
