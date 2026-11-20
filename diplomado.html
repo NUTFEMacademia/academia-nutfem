@@ -36,6 +36,7 @@
 @media(max-width:900px){.tsN-g{grid-template-columns:1fr}}
 </style>
 <meta charset="utf-8">
+<meta name="color-scheme" content="light">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>NUTFEM 2027 · Diplomado Clínico en Nutrición Hormonal Femenina Integrativa</title>
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
@@ -63,7 +64,7 @@
 :root{--bg:#FFFFFF;--bg2:#FFF6F8;--ink:#241C1F;--mut:#6A5E62;--pink:#EC96AC;--deep:#640D14;--card:#FFFFFF;--line:#F0D9E0;--on-pink:#241C1F;--on-deep:#FFFFFF;--crim:#B0173D;
 --head:'Inter Tight','Helvetica Neue',Arial,sans-serif;--body:'Inter','Helvetica Neue',Arial,sans-serif;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1A0F11;--bg2:#261619;--ink:#F5EDEF;--mut:#BBAAB0;--deep:#F2B6C6;--crim:#F28FA8;--card:#211A1D;--line:#3A2D32;--on-deep:#241C1F}}
+@media(prefers-color-scheme:dark) and (max-width:0px){:root:not([data-theme="light"]){--bg:#1A0F11;--bg2:#261619;--ink:#F5EDEF;--mut:#BBAAB0;--deep:#F2B6C6;--crim:#F28FA8;--card:#211A1D;--line:#3A2D32;--on-deep:#241C1F}}
 :root[data-theme="dark"]{--bg:#1A0F11;--bg2:#261619;--ink:#F5EDEF;--mut:#BBAAB0;--deep:#F2B6C6;--crim:#F28FA8;--card:#211A1D;--line:#3A2D32;--on-deep:#241C1F}
 html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.7 var(--body)}
@@ -163,7 +164,7 @@ section{padding:96px 0}
 .plan b{display:block;font:500 clamp(2rem,4vw,2.8rem)/1 var(--head);letter-spacing:-.03em}.plan em{font-style:normal;color:var(--mut);font-size:.95rem}.plan p{margin:14px 0 20px;font-size:.95rem;color:var(--mut)}
 .pn{font-size:.88rem;color:var(--mut);margin:18px 0 0;max-width:70ch}
 .port{--acc:var(--pink);--accon:#241C1F}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .port{--acc:#640D14;--accon:#fff}}
+@media(prefers-color-scheme:dark) and (max-width:0px){:root:not([data-theme="light"]) .port{--acc:#640D14;--accon:#fff}}
 :root[data-theme="dark"] .port{--acc:#640D14;--accon:#fff}
 .port .learn b,.port .steps b{color:var(--acc)}.port .learn div{border-top-color:var(--acc)}
 .port .btn{background:var(--acc);border-color:var(--acc);color:var(--accon)}
@@ -1019,10 +1020,10 @@ dialog.dz::backdrop{background:rgba(36,28,31,.55)}
 .hx-a .hx-d{grid-template-columns:repeat(5,1fr)}
 @media(max-width:1100px){.hx-a .hx-t{max-width:540px}.hx-a .hx-v{width:min(520px,44vw)}}
 @media(max-width:900px){.hx-a .hx-g{flex-direction:column;align-items:stretch;padding-top:20px}.hx-a .hx-v{order:-1;position:relative;top:auto;right:auto;transform:none;width:min(300px,80vw);margin:0 auto 14px}.hx-a .hx-t{max-width:none}.hx-a .hx-d{grid-template-columns:1fr 1fr}}
-.mods-dz{display:flex;align-items:center;justify-content:space-between;gap:24px 48px;margin:44px 0 0;padding:clamp(26px,4vw,40px) clamp(22px,4vw,44px);background:#FFF6F8;border-left:4px solid #B0173D}.mods-dz-t{max-width:40em}.mods-dz-k{font:600 .8rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:#B0173D;margin:0 0 8px}.mods-dz-h{font:500 clamp(1.45rem,2.6vw,2rem)/1.2 var(--head);letter-spacing:-.02em;color:#241C1F;margin:0 0 8px}.mods-dz-h mark{background:linear-gradient(transparent 12%,#F6C9D5 12%,#F6C9D5 92%,transparent 92%);color:inherit;padding:0 .1em}.mods-dz-s{margin:0;color:#6A5E62;font-size:.98rem}.mods-dz .btn{flex:none}@media(max-width:760px){.mods-dz{flex-direction:column;align-items:stretch}.mods-dz .btn{text-align:center}}@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .mods-dz{background:var(--bg2)}:root:not([data-theme="light"]) .mods-dz-h{color:var(--ink)}:root:not([data-theme="light"]) .mods-dz-s{color:var(--mut)}}
+.mods-dz{display:flex;align-items:center;justify-content:space-between;gap:24px 48px;margin:44px 0 0;padding:clamp(26px,4vw,40px) clamp(22px,4vw,44px);background:#FFF6F8;border-left:4px solid #B0173D}.mods-dz-t{max-width:40em}.mods-dz-k{font:600 .8rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:#B0173D;margin:0 0 8px}.mods-dz-h{font:500 clamp(1.45rem,2.6vw,2rem)/1.2 var(--head);letter-spacing:-.02em;color:#241C1F;margin:0 0 8px}.mods-dz-h mark{background:linear-gradient(transparent 12%,#F6C9D5 12%,#F6C9D5 92%,transparent 92%);color:inherit;padding:0 .1em}.mods-dz-s{margin:0;color:#6A5E62;font-size:.98rem}.mods-dz .btn{flex:none}@media(max-width:760px){.mods-dz{flex-direction:column;align-items:stretch}.mods-dz .btn{text-align:center}}@media(prefers-color-scheme:dark) and (max-width:0px){:root:not([data-theme="light"]) .mods-dz{background:var(--bg2)}:root:not([data-theme="light"]) .mods-dz-h{color:var(--ink)}:root:not([data-theme="light"]) .mods-dz-s{color:var(--mut)}}
 .nav a.brand{text-decoration:none;display:inline-flex;align-items:center}.nav a.brand:hover{opacity:.8}.nav a.brand:focus-visible{outline:2px solid var(--deep);outline-offset:4px}
 #inicio{scroll-margin-top:200px}
-.fb-q{background:#fff;color:#241C1F;padding:clamp(64px,9vw,112px) 0}.fb-q p{max-width:25em;font:300 clamp(1.55rem,3.2vw,2.5rem)/1.28 var(--head);letter-spacing:-.02em}.fb-q p:before{content:"";display:block;width:56px;height:4px;background:#EC96AC;margin-bottom:26px}.fb-q mark{font-weight:600;color:#241C1F;background:linear-gradient(transparent 12%,#F6C9D5 12%,#F6C9D5 92%,transparent 92%);padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .fb-q{background:var(--bg);color:var(--ink)}}:root[data-theme="dark"] .fb-q{background:var(--bg);color:var(--ink)}
+.fb-q{background:#fff;color:#241C1F;padding:clamp(64px,9vw,112px) 0}.fb-q p{max-width:25em;font:300 clamp(1.55rem,3.2vw,2.5rem)/1.28 var(--head);letter-spacing:-.02em}.fb-q p:before{content:"";display:block;width:56px;height:4px;background:#EC96AC;margin-bottom:26px}.fb-q mark{font-weight:600;color:#241C1F;background:linear-gradient(transparent 12%,#F6C9D5 12%,#F6C9D5 92%,transparent 92%);padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}@media(prefers-color-scheme:dark) and (max-width:0px){:root:not([data-theme="light"]) .fb-q{background:var(--bg);color:var(--ink)}}:root[data-theme="dark"] .fb-q{background:var(--bg);color:var(--ink)}
 .pfA .pf-ph::after{display:none}
 .ft-tc{margin-top:24px}.ft-btn{background:transparent;border-color:rgba(246,201,213,.7);color:#fff;padding:12px 20px;font-size:.78rem}.ft-btn:hover,.ft-btn:focus-visible{background:#fff;border-color:#fff;color:#640D14}
 .phB{background:var(--bg);padding:clamp(72px,9vw,120px) 0}.phB-g{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(36px,6vw,96px);align-items:center}.phB-k{font:600 .85rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:#B0173D;margin:0 0 14px}.phB h2{font:500 clamp(2rem,3.6vw,3rem)/1.1 var(--head);letter-spacing:-.025em;color:var(--ink);margin:0 0 20px;max-width:14em}.phB-t p:not(.phB-k){margin:0;color:var(--mut);font-size:clamp(1.02rem,1.4vw,1.15rem);line-height:1.65;max-width:34em}.phB-ph{margin:0 14px 14px 0;aspect-ratio:4/5;background-size:cover;background-position:center 30%;box-shadow:14px 14px 0 #F6C9D5}@media(max-width:860px){.phB-g{grid-template-columns:1fr}.phB-ph{order:-1;aspect-ratio:4/3}}
@@ -1093,6 +1094,24 @@ html.rg-on,html.rg-on body{overflow:hidden}
 @media(min-width:561px){.chs{display:grid;grid-template-columns:1fr 1fr;gap:8px}.chs legend{grid-column:1/-1}.ch{margin:0}.ch span{height:100%;padding:10px 12px;font-size:.9rem;line-height:1.3}}#contactar .rg-g{max-width:540px}#contactar .rg-sub{margin-bottom:18px}#contactar .f{margin-bottom:12px}#contactar textarea{min-height:70px}#contactar .two{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}@media(max-width:560px){#contactar .two{grid-template-columns:1fr}}
 .fb-w{background:#fff;color:#640D14;border-top:1px solid #F6E3E9;border-bottom:1px solid #F6E3E9}.fb-w .w{text-align:center}.fb-w p{margin-left:auto;margin-right:auto;max-width:24em;font-weight:400;font-size:clamp(1.6rem,3.6vw,2.7rem);color:#640D14}.fb-w mark{font-weight:600;color:#640D14;background:linear-gradient(transparent 12%,#F6C9D5 12%,#F6C9D5 92%,transparent 92%);padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}.fb-w .fb-a{display:block;margin-top:22px;font:600 .82rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:#B0173D}
 .tsQ{background:#FFF6F8;color:#241C1F;padding:clamp(56px,8vw,96px) 0}.tsQ .tsN-f{border-left-color:#E8A3B6}.tsQ .tsN-f:first-child{margin-top:0}.tsQ .tsN-f blockquote{color:#640D14}.tsQ .tsN-f blockquote span{color:#B0173D}.tsQ figcaption,.tsQ figcaption b{color:#5C4A50}.tsQ figcaption b{color:#640D14}
+.hx{background:#FFF6F8;color:#241C1F}.hx h1{color:#640D14}.hx h1 .l{color:#B0173D}.hx .lead{color:#3B3034;opacity:1}
+.hx-k{color:#B0173D}.hx-b{color:#640D14!important;border-color:#E8C4CF!important;background:#fff!important}
+.hx .btn{background:#640D14;color:#fff;border-color:#640D14}.hx .btn.o{background:transparent;color:#640D14;border-color:#640D14}
+.hx .btn:hover,.hx .btn:focus-visible{background:#B0173D;border-color:#B0173D;color:#fff}.hx .btn.o:hover,.hx .btn.o:focus-visible{background:#640D14;color:#fff}
+.hx-bar{background:#640D14;color:#fff}
+.hx-a .hx-v.hx-ph{position:absolute;top:0;bottom:0;right:0;transform:none;width:50%;background-size:cover}
+.hx-a .hx-v.hx-ph:before{display:none}
+.hx-a .hx-t{max-width:min(560px,46%)}
+@media(max-width:860px){.hx-a .hx-g{flex-direction:column;align-items:stretch;padding-top:0}.hx-a .hx-v.hx-ph{position:relative;width:auto;height:auto;aspect-ratio:4/3;margin:0 -24px 32px}.hx-a .hx-t{max-width:none}}
+
+.hx-a{position:relative;background:#FFF6F8}
+.hx-a:before{content:"";position:absolute;top:0;right:0;bottom:0;width:68%;background:url(img/dip-hero-consulta.webp) 70% 30%/cover;
+-webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.35) 18%,#000 46%);mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.35) 18%,#000 46%)}
+.hx-a>*{position:relative;z-index:1}
+.hx-a .hx-t{max-width:min(560px,48%)}
+.hx-bar{position:relative;z-index:1}
+@media(max-width:860px){.hx-a:before{left:0;width:auto;bottom:auto;height:min(78vw,420px);-webkit-mask-image:linear-gradient(180deg,#000 55%,transparent 100%);mask-image:linear-gradient(180deg,#000 55%,transparent 100%)}
+.hx-a .hx-g{padding-top:min(66vw,350px)}.hx-a .hx-t{max-width:none}}
 </style><script>/* detecta si el sistema dibuja banderas en color */
 (function(){try{var c=document.createElement('canvas');c.width=c.height=32;var x=c.getContext('2d');x.textBaseline='top';x.font='28px sans-serif';x.fillText('\uD83C\uDDE8\uD83C\uDDF1',0,0);var d=x.getImageData(0,0,32,32).data,col=0;for(var i=0;i<d.length;i+=4){if(d[i+3]>40&&(Math.abs(d[i]-d[i+1])>40||Math.abs(d[i+1]-d[i+2])>40))col++}if(col<20)document.documentElement.classList.add('no-flags')}catch(e){}})();</script>
 </head>
@@ -1110,7 +1129,7 @@ html.rg-on,html.rg-on body{overflow:hidden}
 <a class="btn" href="https://encuadrado.com/s/consulta-marcela-paz-calderon/diplomado-nutfem-2027/" data-reserva>INSCRÍBETE<span class="nb-x"> AQUÍ</span></a></div></nav>
 
 <header class="hx hx-a" id="inicio"><div class="w hx-g"><div class="hx-t"><p class="hx-b"><span></span>Preventa hasta el 31 de diciembre</p><p class="hx-k">Generación 2027 · Tercera versión · Inicio 3 de abril</p><h1><span class="l">Diplomado Clínico en</span> Nutrición Hormonal Femenina Integrativa</h1><p class="lead">Formación clínica para profesionales de la salud: aprende a interpretar el ciclo menstrual como biomarcador e integrar la nutrición clínica en el razonamiento de cada caso, desde un enfoque integrativo y no peso-céntrico.</p><div class="row"><a class="btn" href="https://encuadrado.com/s/consulta-marcela-paz-calderon/diplomado-nutfem-2027/" data-reserva>RESERVAR MI CUPO</a><a class="btn o" href="https://dossier-nutfem2027.subscribepage.io/" target="_blank" rel="noopener">REVISAR DOSSIER</a></div></div>
-<div class="hx-v" aria-hidden="true"><img class="hx-u" src="img/dip-13309d03.webp" alt=""></div></div>
+</div>
 <div class="hx-bar"><div class="w"><dl class="hx-d"><div><dt>Abril–sept.</dt><dd>2027</dd></div><div><dt>6</dt><dd>módulos</dd></div><div><dt>42</dt><dd>clases</dd></div><div><dt>+120</dt><dd>horas académicas</dd></div><div><dt>100 %</dt><dd>online y grabado</dd></div></dl></div></div></header>
 
 <div class="fband fb-q"><div class="w"><p>¿Cuántas veces hemos incorporado conocimientos teórico-clínicos valiosos <mark>sin saber cómo llevarlos a nuestra práctica</mark> y aplicarlos en la consulta?</p></div></div>
